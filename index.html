@@ -49,7 +49,6 @@
         Hier erscheint dein text
       </b>
     </p>
-
   </div>
 </div-->
 <div class="ui  container">
@@ -135,26 +134,6 @@
 
 
 
-<div class="ui text container">
-  <div class="ui segment inverted secondary blue">
-  <p style="font-size:2rem;olor:#9503e2">
-    {{olds}}
-  </p>
-
-</div>
-</div>
-<br>
-<div class="ui two column grid">
-  <div class="ui column">
-
-  </div>
-  <div class="ui column">
-    <div class="ui button big left floated blue icon">
-      <i class="icon copy"></i>
-      Kopieren *
-    </div> leider noch nicht fertig
-  </div>
-</div>
 
 
 
@@ -169,25 +148,17 @@
 
 
  <script>
-
  /**
  autor: u/Graf_lcky && u/Graf_Icky
  zweck: k1en
-
  Ist ganz Simpel gestaltet mit Replace für jede Einheit,
  von Hand gecoded denn ich hatte keine Lust zu viele Dinge
  Schleifen zu lassen.
-
  Und warum nur ein File? Weil ich es dann einfacher Hosten kann.
-
  Wer Lust hat: Bitte Weitermachen, Besser Machen und dazu beitragen daj3 alle Lachen
-
  **/
-
-
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
-
   // Typische MaiMais
     $scope.maimai = [
     		"!!! Könnte mir gefallen + schmecken ! ! !",
@@ -204,20 +175,13 @@ app.controller("myCtrl", function($scope) {
         "Keine!!!",
         "Hurensohn!",
         "Gut GeMaiMait MaiMaiMeister"];
-
 // Input und Übersetzungsplatzhalter
       $scope.old = "";
       $scope.olds = " ";
-
-
 // Übersetzungsfunktion
-
         $scope.new = function(){
-
           // das ganze hier drunter als for each loop
           // replace daten in scope packen
-
-
         $scope.ein = $scope.old.replace(/ein/g,"1");
         $scope.Ein = $scope.ein.replace(/Ein/g,"1");
         $scope.zwei = $scope.Ein.replace(/zwei/g,"2");
@@ -226,7 +190,6 @@ app.controller("myCtrl", function($scope) {
         $scope.Drei = $scope.drei.replace(/Drei/g,"3");
         //$scope.Ein = $scope.Drei.replace(/Ein/g,"1");
         //$scope.Ein = $scope.ein.replace(/Ein/g,"1");
-
         $scope.esz = $scope.drei.replace(/ß/g,"j3");
         $scope.ss = $scope.esz.replace(/ss/g,"j3");
        $scope.meme = $scope.ss.replace(/meme/g,"MaiMai");
@@ -235,12 +198,8 @@ app.controller("myCtrl", function($scope) {
       //  $scope.gitt = $scope.nazimod.replace(/Gitt/g,"Gittertier"); hier gibts Probleme
         $scope.olds = $scope.nazimod.replace(/Nazi/g,"Natzi");
         $scope.old = $scope.olds;
-
       }
-
-
       // MaiMais im Text einfügen
-
         $scope.putt = function(x) {
 //          $scope.olds.push(x);
             if ($scope.olds == undefined) {
@@ -249,14 +208,10 @@ app.controller("myCtrl", function($scope) {
             }
             else {
               $scope.olds = $scope.olds + ' ' + x + ' ';
-
             }
             $scope.old = $scope.olds
         }
-
         });
-
-
 // Ein Filter ohne verwendung
         app.filter('split', function() {
                 return function(input, splitChar, splitIndex) {
@@ -264,10 +219,6 @@ app.controller("myCtrl", function($scope) {
                     return input.split(splitChar)[splitIndex];
                 }
             });
-
-
-
-
 </script>
 
 <!-- DICKS OUT FOR HARAMBE -->
