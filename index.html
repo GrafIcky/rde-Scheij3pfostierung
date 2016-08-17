@@ -1,0 +1,276 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>r/de Comment Generator version Ein</title>
+  <meta name="description" content="Wer dies liest hat Langeweile!">
+  <meta name="author" content="u/Graf_Icky + u/Graf_lcky">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Kommentare -->
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl" style="
+    background: #141E30; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #141E30 , #243B55); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #141E30 , #243B55);">
+<br>
+<div class="ui grid">
+
+		<div class="ui borderless container">
+<div class="ui segment raised">
+      <div class="ui text container left aligned">
+
+<div style="font-size:3rem;font-weight:400" class="ui sub header big blue">
+  <b style="font-size:3.2rem">Wie</b> kann man <b style="font-size:3.2rem">sich</b> nur so <b style="font-size:3.2rem">hart</b> <s>gönnen</s>
+<u>  <b style="font-size:3.2rem;font-weight:900">reta<b style="color:#ffd214">r/de</b>n</b></u>
+</div>
+<div class="ui sub header yellow">
+  Übersetze nun jeden Text aus Ordinärdeutsch in den hippen Jugensprachenslang der He r/de<br>
+</div>
+</div>
+
+<!--div class="ui fluid container">
+  <div class="ui segment inverted blue">
+    <p style="font-size:2rem;olor:#9503e2">
+      {{olds}}
+       <b ng-if="olds == 'Hier ersch1t d1 Text'">
+        Hier erscheint dein text
+      </b>
+    </p>
+
+  </div>
+</div-->
+<div class="ui  container">
+  <div class="ui three column grid">
+    <div class="ui column two wide">
+
+    </div>
+    <div class="ui column twelve wide">
+      <div class="ui segment inverted raised" style="
+          min-height:300px;
+          background: #FF8008; /* fallback for old browsers */
+          background: -webkit-linear-gradient(to left, #FF8008 , #FFC837); /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to left, #FF8008 , #FFC837); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      ">
+      <div class="ui segment" style="min-height:300px">
+
+        <h2 style="font-size:2.4rem" ng-hide="olds == ' '">{{olds}}</h2>
+        <h2 style="font-size:2.4rem" ng-if="olds==' '">Hier ersch1t d1 Text</h2>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="ui column two wide">
+
+          <div class="ui button fluid big left floated blue icon">
+            <i class="icon copy"></i>
+            Kopieren*
+          </div> leider noch nicht fertig
+ <div class="ui horizontal divider">
+   <i class="icon shop"></i>
+ </div>
+
+           <!--div class="ui button big fluid left floated red icon">
+               <i class="icon close"></i><br>
+                 Löschen
+             </div>
+<br><br-->
+<div class="ui segment basic">
+
+</div>
+<div class="ui segment basic">
+
+</div>
+
+          <div class="ui button big fluid left floated green icon" ng-click="new()">
+              <i class="icon translate"></i><br>
+                Über<br>setzen
+            </div>
+
+
+    </div>
+  </div>
+
+</div>
+      <div class="ui segment  basic">
+        <div class="ui horizontal divider">
+          GIB HIER D1EN TEXT 1
+        </div>
+<div class="ui segment basic">
+          <div class="ui input fluid massive" style="border:1px solid #14bbbb">
+            <input class="ui input" placeholder="Gib hier 1 n Text ein" ng-model="old" ng-keyup=new()>
+          </div>
+
+          </div>
+
+          <div class="ui horizontal divider">
+            ODER KLICKE MAIMAIS
+          </div>
+<div class="ui  container">
+            <div class="ui button circular primary inverted icon" ng-repeat="x in maimai" ng-click="putt(x)">
+              {{x}}
+          </div>
+          </div>
+
+
+          <div class="ui divider horizontal">
+            <!--i class="icon angle up"></i>
+            <i class="icon angle down"></i-->
+              <i class="icon huge blue double angle down ui"></i>
+          </div>
+
+
+
+
+<div class="ui text container">
+  <div class="ui segment inverted secondary blue">
+  <p style="font-size:2rem;olor:#9503e2">
+    {{olds}}
+  </p>
+
+</div>
+</div>
+<br>
+<div class="ui two column grid">
+  <div class="ui column">
+
+  </div>
+  <div class="ui column">
+    <div class="ui button big left floated blue icon">
+      <i class="icon copy"></i>
+      Kopieren *
+    </div> leider noch nicht fertig
+  </div>
+</div>
+
+
+
+        <div class="ui horizontal divider">
+          <i class="icon shop big"></i>
+        </div>
+
+</div>
+</div>
+
+</div>
+
+
+ <script>
+
+ /**
+ autor: u/Graf_lcky && u/Graf_Icky
+ zweck: k1en
+
+ Ist ganz Simpel gestaltet mit Replace für jede Einheit,
+ von Hand gecoded denn ich hatte keine Lust zu viele Dinge
+ Schleifen zu lassen.
+
+ Und warum nur ein File? Weil ich es dann einfacher Hosten kann.
+
+ Wer Lust hat: Bitte Weitermachen, Besser Machen und dazu beitragen daj3 alle Lachen
+
+ **/
+
+
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+
+  // Typische MaiMais
+    $scope.maimai = [
+    		"!!! Könnte mir gefallen + schmecken ! ! !",
+        "alles Schokoladige ist einfach nur LECKER !!!",
+    		"gut, werner",
+    		"Brillant formuliert, besonderst die Konklusio",
+    		"Gittertier",
+    		"r/de_tektive",
+    		"NEIN!!",
+    		"DOCH!!",
+    		"OHH!!",
+    		"Das macht dann 600€",
+        "Noch Fragen???",
+        "Keine!!!",
+        "Hurensohn!",
+        "Gut GeMaiMait MaiMaiMeister"];
+
+// Input und Übersetzungsplatzhalter
+      $scope.old = "";
+      $scope.olds = " ";
+
+
+// Übersetzungsfunktion
+
+        $scope.new = function(){
+
+          // das ganze hier drunter als for each loop
+          // replace daten in scope packen
+
+
+        $scope.ein = $scope.old.replace(/ein/g,"1");
+        $scope.Ein = $scope.ein.replace(/Ein/g,"1");
+        $scope.zwei = $scope.Ein.replace(/zwei/g,"2");
+        $scope.Zwei = $scope.zwei.replace(/Zwei/g,"2");
+        $scope.drei = $scope.Zwei.replace(/drei/g,"3");
+        $scope.Drei = $scope.drei.replace(/Drei/g,"3");
+        //$scope.Ein = $scope.Drei.replace(/Ein/g,"1");
+        //$scope.Ein = $scope.ein.replace(/Ein/g,"1");
+
+        $scope.esz = $scope.drei.replace(/ß/g,"j3");
+        $scope.ss = $scope.esz.replace(/ss/g,"j3");
+       $scope.meme = $scope.ss.replace(/meme/g,"MaiMai");
+      $scope.Meme = $scope.meme.replace(/Meme/g,"MaiMai");
+        $scope.nazimod = $scope.Meme.replace(/Mod/g,"Nazimod");
+      //  $scope.gitt = $scope.nazimod.replace(/Gitt/g,"Gittertier"); hier gibts Probleme
+        $scope.olds = $scope.nazimod.replace(/Nazi/g,"Natzi");
+        $scope.old = $scope.olds;
+
+      }
+
+
+      // MaiMais im Text einfügen
+
+        $scope.putt = function(x) {
+//          $scope.olds.push(x);
+            if ($scope.olds == undefined) {
+              $scope.olds = ' ' + x + ' ';
+              ;
+            }
+            else {
+              $scope.olds = $scope.olds + ' ' + x + ' ';
+
+            }
+            $scope.old = $scope.olds
+        }
+
+        });
+
+
+// Ein Filter ohne verwendung
+        app.filter('split', function() {
+                return function(input, splitChar, splitIndex) {
+                    // do some bounds checking here to ensure it has that index
+                    return input.split(splitChar)[splitIndex];
+                }
+            });
+
+
+
+
+</script>
+
+<!-- DICKS OUT FOR HARAMBE -->
+
+</body>
+</html>
